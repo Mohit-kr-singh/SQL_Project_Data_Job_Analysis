@@ -85,8 +85,7 @@ Step  Description
 **4. Visualization** | Created a horizontal bar chart to clearly compare salaries by company and job title. 
 **5. Insights** | Observed that roles like *Senior Business & Data Analyst* (Deutsche Bank) and *Sr. Enterprise Data Analyst* (ACA Group) top the list, indicating premium pay for senior and enterprise-level roles.
 
-<img width="2010" height="1180" alt="image" src="https://github.com/user-attachments/assets/1ce5badf-bfea-4515-9245-934eee9bae3c" />
+![Alt text](Images/top_jobs.jpg)
 
-Images/top_paying_jobs.jpg
 
 
