@@ -340,3 +340,37 @@ FROM skill_demand
 INNER JOIN avg_salary 
     ON skill_demand.skill_id = avg_salary.skill_id;
 ```
+
+#### 💡 Top Skills Balancing Salary & Demand  
+
+| Rank | Skill | Demand Count | Avg. Salary (USD) | Insight |
+|------|--------|---------------:|------------------:|---------|
+| 1️⃣ | **SQL** | 1,016 | 85,397 | The foundation of all analytics — required in nearly every job, ensuring stability and consistent demand. |
+| 2️⃣ | **Excel** | 717 | 84,366 | Core analytical tool; essential for business reporting, dashboards, and quick data insights. |
+| 3️⃣ | **Python** | 687 | 77,186 | Key for automation, data cleaning, and analysis; bridges analytics and data science. |
+| 4️⃣ | **Tableau** | 545 | 74,435 | Visualization powerhouse for data storytelling and executive reporting. |
+| 5️⃣ | **Power BI** | 402 | 118,140 | High salary premium; combines visualization and enterprise-level reporting. |
+| 6️⃣ | **Azure** | 151 | 118,140 | Reflects rising demand for cloud analytics and enterprise data solutions. |
+| 7️⃣ | **PowerPoint** | 154 | 104,550 | High value for presentation and communication of insights. |
+| 8️⃣ | **R** | 286 | 76,667 | Useful for statistical modeling and deeper analytical insights. |
+| 9️⃣ | **Flow** | 102 | 96,604 | Growing automation skill linking analytics with workflow efficiency. |
+| 🔟 | **Visio / Jira / Confluence** | 17–57 | 119,250 | Premium enterprise collaboration tools — seen in senior analyst and business strategy roles. |
+
+---
+
+#### 📊 Insights Breakdown  
+
+- **🔹 High-demand, high-salary intersection:** Skills like **SQL**, **Excel**, and **Python** dominate in job volume while maintaining strong salary levels.  
+- **💼 Enterprise advantage:** Tools such as **Power BI**, **Azure**, **Visio**, and **Jira** offer premium pay — common in large-scale analytics teams.  
+- **📈 Visualization and communication:** **Tableau** and **PowerPoint** remain vital for data storytelling and business presentations.  
+- **🧠 Automation edge:** Skills like **Flow** and **Cloud tools (Azure)** indicate growing adoption of automation and scalable data workflows.  
+
+**🧩 Key Takeaway:**  
+To maximize both **career opportunities** and **salary potential**, Data Analysts should focus on mastering a **hybrid stack**:  
+➡️ **Core tools:** SQL, Excel, Python  
+➡️ **Visualization:** Power BI, Tableau  
+➡️ **Cloud & Enterprise:** Azure, Jira, Confluence  
+➡️ **Communication & Automation:** PowerPoint, Flow  
+
+---
+
