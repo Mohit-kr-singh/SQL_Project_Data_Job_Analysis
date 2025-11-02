@@ -290,9 +290,11 @@ This query combines **skill demand** and **average salary** data to reveal which
 
 **Step  Description ** 
 
-**1. skill_demand CTE** Calculates how many job postings mention each skill — identifying which ones are most in demand. |
-**2. avg_salary CTE**  Computes the average salary for each skill, showing its market value. |
-**3. Combine Results**  Joins both datasets on `skill_id` to align demand and salary insights for every skill. |
+**1. skill_demand CTE** Calculates how many job postings mention each skill — identifying which ones are most in demand.
+
+**2. avg_salary CTE**  Computes the average salary for each skill, showing its market value.
+
+**3. Combine Results**  Joins both datasets on `skill_id` to align demand and salary insights for every skill.
 
 ---
 
