@@ -267,4 +267,18 @@ LIMIT 20;
 | 9️⃣ | Word | **89,579** |
 | 🔟 | SQL | **85,397** |
 
+#### 📊 Insights Breakdown  
+
+The table highlights the **skills most closely associated with higher salaries** for Data Analyst roles in India.  
+
+- **🏢 Enterprise tools** like **Visio**, **Jira**, and **Confluence** top the list — showing strong demand for analysts who can manage workflows, documentation, and collaboration in enterprise environments.  
+- **⚙️ Business Intelligence & Cloud** skills such as **Power BI** and **Azure** also rank high, reflecting the premium placed on cloud-based analytics and data visualization expertise.  
+- **🧮 Core analytical tools** like **SQL**, **Excel**, and **Python** remain essential but command slightly lower salaries compared to enterprise-level tools.  
+- **🧠 Advanced frameworks** like **TensorFlow** and **PyTorch** demonstrate that knowledge in **machine learning** can also boost earning potential.  
+- **💼 Productivity tools** (Word, PowerPoint, Outlook) still appear in high-paying roles, underscoring the value of communication and reporting in analytics.  
+
+**🧩 Key Takeaway:**  
+To reach the **top salary bracket**, Data Analysts should combine **core technical skills (SQL, Python)** with **enterprise and visualization tools (Power BI, Azure, Jira)** — blending technical analysis with strategic business insight.
+
+
 
