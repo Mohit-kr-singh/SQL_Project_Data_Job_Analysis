@@ -161,4 +161,56 @@ ORDER BY
 **🧩 Key Takeaway:**  
 Top-paying Data Analyst roles reward professionals who blend **core analytics (SQL, Excel, Python)** with **business and visualization tools (Power BI, Azure, Jira, Confluence)** for maximum impact.
 
+### 3️⃣ In-Demand Skills for Data Analysts  
+
+This query identifies the **skills most frequently requested** in Data Analyst job postings across India, helping highlight the areas with the **highest demand** in the job market.  
+It provides valuable guidance on which skills aspiring analysts should prioritize to improve employability.  
+
+---
+
+#### 🧩 Query Breakdown  
+
+| Step | Description |
+|------|--------------|
+| **1. Join Tables** | Combined `job_postings_fact`, `skills_job_dim`, and `skills_dim` to link each job posting with its required skills. |
+| **2. Filter Roles** | Focused only on jobs titled *Data Analyst* located in *India*. |
+| **3. Count Skill Occurrences** | Counted how many times each skill appeared across all job listings. |
+| **4. Sort & Limit** | Ordered by frequency (descending) and displayed the top 10 most requested skills. |
+
+---
+
+#### 📄 SQL Query
+```sql
+SELECT 
+    skills,
+    COUNT(skills_job_dim.job_id) AS demand_count
+FROM job_postings_fact
+INNER JOIN skills_job_dim 
+    ON job_postings_fact.job_id = skills_job_dim.job_id
+INNER JOIN skills_dim 
+    ON skills_job_dim.skill_id = skills_dim.skill_id
+WHERE 
+    job_title_short = 'Data Analyst' 
+    AND job_location = 'India'
+GROUP BY 
+    skills
+ORDER BY 
+    demand_count DESC
+LIMIT 10;
+```
+<img width="645" height="453" alt="image" src="https://github.com/user-attachments/assets/0f6e558b-a9e7-4aa2-a176-2e822fee8312" />
+
+#### 📈 Chart Story Breakdown  
+
+The bar chart visualizes the **frequency of the most requested skills** across Data Analyst job listings in India.  
+
+- **SQL** dominates as the most in-demand skill, appearing in over **1,000 job postings** — a must-have for all analysts.  
+- **Excel** and **Python** remain core tools for **data cleaning, processing, and automation**.  
+- **Tableau** and **Power BI** stand out as essential for **data storytelling and visualization**.  
+- **R** and **SAS** continue to be valuable for **statistical and business analytics** roles.  
+- **Azure** and **AWS** highlight the growing demand for **cloud-based analytics** skills in modern data workflows.  
+
+**🧩 Key Takeaway:**  
+The most in-demand Data Analyst roles reward professionals who combine **SQL, Excel, and Python** with **visualization (Tableau, Power BI)** and **cloud technologies (Azure, AWS)** to stay future-ready in the evolving data landscape.
+
 
