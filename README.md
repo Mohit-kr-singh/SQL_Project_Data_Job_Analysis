@@ -80,9 +80,13 @@ LIMIT 10;
 Step  Description 
 --------------------
 **1. Data Extraction** | Pulled the top 10 Data Analyst job postings in India using SQL, filtered by available salary data. 
+
 **2. Key Fields Selected** | Extracted job title, company name, location, schedule type, and yearly average salary. 
+
 **3. Data Cleaning** | Removed null or missing salary values to ensure accurate analysis. 
+
 **4. Visualization** | Created a horizontal bar chart to clearly compare salaries by company and job title. 
+
 **5. Insights** | Observed that roles like *Senior Business & Data Analyst* (Deutsche Bank) and *Sr. Enterprise Data Analyst* (ACA Group) top the list, indicating premium pay for senior and enterprise-level roles.
 
 ![Alt text](Images/top_jobs.jpg)
