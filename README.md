@@ -252,7 +252,7 @@ ORDER BY
 LIMIT 20;
 ```
 
-#### 💰 Top 20 Highest-Paying Data Analyst Skills in India  
+#### 💰 Top 10 Highest-Paying Data Analyst Skills in India  
 
 | Rank | Skill | Average Salary (USD) |
 |------|--------|---------------------:|
