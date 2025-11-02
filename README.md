@@ -280,5 +280,61 @@ The table highlights the **skills most closely associated with higher salaries**
 **🧩 Key Takeaway:**  
 To reach the **top salary bracket**, Data Analysts should combine **core technical skills (SQL, Python)** with **enterprise and visualization tools (Power BI, Azure, Jira)** — blending technical analysis with strategic business insight.
 
+### 5️⃣ Most Optimal Skills to Learn  
 
+This query combines **skill demand** and **average salary** data to reveal which skills provide the **best career ROI** — i.e., those that are both **frequently required** and **highly paid** in India’s Data Analyst job market.  
 
+---
+
+#### 🧩 Query Breakdown  
+
+**Step  Description ** 
+
+**1. skill_demand CTE** Calculates how many job postings mention each skill — identifying which ones are most in demand. |
+**2. avg_salary CTE**  Computes the average salary for each skill, showing its market value. |
+**3. Combine Results**  Joins both datasets on `skill_id` to align demand and salary insights for every skill. |
+
+---
+
+#### 📄 SQL Query  
+
+```sql
+WITH skill_demand AS (
+    SELECT 
+        skills_dim.skill_id,
+        skills_dim.skills,
+        COUNT(skills_job_dim.job_id) AS demand_count
+    FROM job_postings_fact
+    INNER JOIN skills_job_dim 
+        ON job_postings_fact.job_id = skills_job_dim.job_id
+    INNER JOIN skills_dim 
+        ON skills_job_dim.skill_id = skills_dim.skill_id
+    WHERE 
+        job_title_short = 'Data Analyst' 
+        AND job_location = 'India'
+    GROUP BY skills_dim.skills, skills_dim.skill_id
+), avg_salary AS (  
+    SELECT
+        skills_dim.skill_id,
+        skills_dim.skills,
+        ROUND(AVG(salary_year_avg), 0) AS average_salary
+    FROM job_postings_fact
+    INNER JOIN skills_job_dim 
+        ON job_postings_fact.job_id = skills_job_dim.job_id
+    INNER JOIN skills_dim 
+        ON skills_job_dim.skill_id = skills_dim.skill_id
+    WHERE 
+        job_title_short = 'Data Analyst' 
+        AND salary_year_avg IS NOT NULL 
+        AND job_location = 'India'
+    GROUP BY skills_dim.skill_id, skills_dim.skills
+)
+SELECT
+    skill_demand.skill_id,
+    skill_demand.skills,
+    demand_count,
+    average_salary
+FROM skill_demand
+INNER JOIN avg_salary 
+    ON skill_demand.skill_id = avg_salary.skill_id;
+```
