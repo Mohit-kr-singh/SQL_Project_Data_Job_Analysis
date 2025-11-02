@@ -92,7 +92,9 @@ This chart visualizes the **Top 10 Highest-Paying Data Analyst Jobs in India**, 
 - **🔬 Merck Group** and **Bristol Myers Squibb** show that **biopharma companies** also value analytical expertise for research and commercial operations.  
 
 **🧩 Key Takeaway:**  
-High-paying Data Analyst roles in India are concentrated in **finance, enterprise solutions, and research-based industries**, especially for **senior o**
+High-paying Data Analyst roles in India are concentrated in **finance, enterprise solutions, and research-based industries**, especially for **senior o** 
+
+![Alt text](Images/top_jobs.jpg)
 
 
 ### 2️⃣ Skills for Top-Paying Jobs  
@@ -148,7 +150,7 @@ ORDER BY
 ```
 
 
-![Alt text](Images/top_jobs.jpg)
+
 
 
 
