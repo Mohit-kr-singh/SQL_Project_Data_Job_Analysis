@@ -149,8 +149,16 @@ ORDER BY
     salary_year_avg DESC;
 ```
 
+<img width="1580" height="1180" alt="image" src="https://github.com/user-attachments/assets/3e39b781-ed49-447f-9f75-19a0e2beea4a" />
 
+## 📊 Insights from the Analysis  
 
+- **SQL** and **Excel** are the most common skills, forming the foundation of high-paying analytics roles.  
+- **Power BI**, **Tableau**, and **Python** highlight strong demand for data visualization and technical expertise.  
+- **Enterprise tools** like **Azure**, **Jira**, and **Confluence** link to the highest salaries, showing value in business collaboration and project management.  
+- **Automation and storytelling tools** (e.g., **Flow**, **PowerPoint**) boost career growth for hybrid analysts.  
 
+**🧩 Key Takeaway:**  
+Top-paying Data Analyst roles reward professionals who blend **core analytics (SQL, Excel, Python)** with **business and visualization tools (Power BI, Azure, Jira, Confluence)** for maximum impact.
 
 
