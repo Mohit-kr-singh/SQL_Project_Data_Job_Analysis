@@ -213,4 +213,58 @@ The bar chart visualizes the **frequency of the most requested skills** across D
 **🧩 Key Takeaway:**  
 The most in-demand Data Analyst roles reward professionals who combine **SQL, Excel, and Python** with **visualization (Tableau, Power BI)** and **cloud technologies (Azure, AWS)** to stay future-ready in the evolving data landscape.
 
+### 4️⃣ Skills Based on Salary  
+
+This query explores the **average salaries associated with different skills** among Data Analyst roles in India.  
+It helps identify which skills are linked to **higher compensation**, guiding professionals on which tools and technologies to prioritize for better career growth.  
+
+---
+
+#### 🧩 Query Breakdown  
+
+Step  Description 
+--------------------
+**1. Join Tables** | Connected `job_postings_fact`, `skills_job_dim`, and `skills_dim` to link job postings with their required skills. 
+**2. Filter Relevant Data** | Focused only on *Data Analyst* roles in *India* with available salary information. 
+**3. Calculate Averages** | Computed the average yearly salary for each skill using the `AVG()` function. 
+**4. Rank Skills by Pay** | Sorted skills in descending order of average salary to identify top-paying ones. 
+
+---
+
+#### 📄 SQL Query
+```sql
+SELECT 
+    skills,
+    ROUND(AVG(salary_year_avg), 0) AS average_salary
+FROM job_postings_fact
+INNER JOIN skills_job_dim 
+    ON job_postings_fact.job_id = skills_job_dim.job_id
+INNER JOIN skills_dim 
+    ON skills_job_dim.skill_id = skills_dim.skill_id
+WHERE 
+    job_title_short = 'Data Analyst' 
+    AND salary_year_avg IS NOT NULL 
+    AND job_location = 'India'
+GROUP BY 
+    skills
+ORDER BY 
+    average_salary DESC
+LIMIT 20;
+```
+
+#### 💰 Top 20 Highest-Paying Data Analyst Skills in India  
+
+| Rank | Skill | Average Salary (USD) |
+|------|--------|---------------------:|
+| 1️⃣ | Visio | **119,250** |
+| 2️⃣ | Jira | **119,250** |
+| 3️⃣ | Confluence | **119,250** |
+| 4️⃣ | Power BI | **118,140** |
+| 5️⃣ | Azure | **118,140** |
+| 6️⃣ | PowerPoint | **104,550** |
+| 7️⃣ | Flow | **96,604** |
+| 8️⃣ | Sheets | **93,600** |
+| 9️⃣ | Word | **89,579** |
+| 🔟 | SQL | **85,397** |
+
 
