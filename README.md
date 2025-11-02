@@ -73,18 +73,84 @@ WHERE
 ORDER BY
     salary_year_avg DESC
 LIMIT 10;
+```
+
+#### 📈 Chart Story Breakdown  
+
+This chart visualizes the **Top 10 Highest-Paying Data Analyst Jobs in India**, comparing average yearly salaries across companies and job titles.
+
+- **🏦 Deutsche Bank** leads with the **Senior Business & Data Analyst** role, offering an average salary of around **$119K**, showing strong demand for senior data professionals in the finance sector.
+  
+- **🏢 ACA Group** follows closely with a **Sr. Enterprise Data Analyst** position paying around **$118K**, indicating high value for enterprise-level data analytics.
+  
+- **🧬 Clarivate** appears twice in the list, reflecting consistent investment in data-driven roles within research and healthcare domains.
+  
+- **💡 Loop Health** and **Cargill** highlight how data analytics extends beyond tech — into **healthcare** and **supply chain analytics** with competitive pay.
+  
+- **📊 AlphaSense** and **Miratech** offer strong salaries for roles blending **AI research, business intelligence, and data integration**, underscoring the growing overlap between analytics and automation.
+  
+- **🔬 Merck Group** and **Bristol Myers Squibb** show that **biopharma companies** also value analytical expertise for research and commercial operations.  
+
+**🧩 Key Takeaway:**  
+High-paying Data Analyst roles in India are concentrated in **finance, enterprise solutions, and research-based industries**, especially for **senior o** 
+
+![Alt text](Images/top_jobs.jpg)
 
 
-#### 📊 Breakdown  
+### 2️⃣ Skills for Top-Paying Jobs  
 
-Step  Description 
---------------------
-**1. Data Extraction** | Pulled the top 10 Data Analyst job postings in India using SQL, filtered by available salary data. 
-**2. Key Fields Selected** | Extracted job title, company name, location, schedule type, and yearly average salary. 
-**3. Data Cleaning** | Removed null or missing salary values to ensure accurate analysis. 
-**4. Visualization** | Created a horizontal bar chart to clearly compare salaries by company and job title. 
-**5. Insights** | Observed that roles like *Senior Business & Data Analyst* (Deutsche Bank) and *Sr. Enterprise Data Analyst* (ACA Group) top the list, indicating premium pay for senior and enterprise-level roles.
+To understand what **skills are required for the top-paying Data Analyst roles**, I joined the job postings dataset with the skills data.  
+This provided deeper insight into what **employers value most** for high-compensation roles in India — helping identify which skills drive higher pay in the analytics domain.  
 
-Images/top_paying_jobs.jpg
+---
+
+#### 🧩 Query Breakdown  
+
+| Step | Description |
+|------|--------------|
+| **1. Identify Top-Paying Roles** | Selected the top 10 highest-paying Data Analyst jobs from the `job_postings_fact` table based on average yearly salary. |
+| **2. Join with Company Data** | Used a `LEFT JOIN` with `company_dim` to include company names for better context. |
+| **3. Merge Skills Information** | Joined the top-paying jobs with `skills_job_dim` and `skills_dim` tables to map each role to its required skills. |
+| **4. Sort Results** | Ordered by salary in descending order to highlight the highest-paying jobs and their skill sets. |
+
+---
+
+#### 📄 SQL Query
+```sql
+WITH top_paying_jobs AS (
+    SELECT 
+        job_id,
+        name AS company_name,
+        job_title,
+        job_location,
+        salary_year_avg
+    FROM 
+        job_postings_fact
+    LEFT JOIN company_dim 
+        ON job_postings_fact.company_id = company_dim.company_id
+    WHERE
+        job_title_short = 'Data Analyst' 
+        AND job_location = 'India' 
+        AND salary_year_avg IS NOT NULL
+    ORDER BY
+        salary_year_avg DESC
+    LIMIT 10
+)
+SELECT 
+    top_paying_jobs.*,
+    skills
+FROM 
+    top_paying_jobs
+INNER JOIN skills_job_dim 
+    ON top_paying_jobs.job_id = skills_job_dim.job_id
+INNER JOIN skills_dim 
+    ON skills_job_dim.skill_id = skills_dim.skill_id
+ORDER BY 
+    salary_year_avg DESC;
+```
+
+
+
+
 
 
