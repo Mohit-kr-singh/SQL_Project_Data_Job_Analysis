@@ -75,19 +75,25 @@ ORDER BY
 LIMIT 10;
 ```
 
-#### 📊 Breakdown  
+#### 📈 Chart Story Breakdown  
 
-Step  Description 
---------------------
-**1. Data Extraction** | Pulled the top 10 Data Analyst job postings in India using SQL, filtered by available salary data. 
+This chart visualizes the **Top 10 Highest-Paying Data Analyst Jobs in India**, comparing average yearly salaries across companies and job titles.
 
-**2. Key Fields Selected** | Extracted job title, company name, location, schedule type, and yearly average salary. 
+- **🏦 Deutsche Bank** leads with the **Senior Business & Data Analyst** role, offering an average salary of around **$119K**, showing strong demand for senior data professionals in the finance sector.
+  
+- **🏢 ACA Group** follows closely with a **Sr. Enterprise Data Analyst** position paying around **$118K**, indicating high value for enterprise-level data analytics.
+  
+- **🧬 Clarivate** appears twice in the list, reflecting consistent investment in data-driven roles within research and healthcare domains.
+  
+- **💡 Loop Health** and **Cargill** highlight how data analytics extends beyond tech — into **healthcare** and **supply chain analytics** with competitive pay.
+  
+- **📊 AlphaSense** and **Miratech** offer strong salaries for roles blending **AI research, business intelligence, and data integration**, underscoring the growing overlap between analytics and automation.
+  
+- **🔬 Merck Group** and **Bristol Myers Squibb** show that **biopharma companies** also value analytical expertise for research and commercial operations.  
 
-**3. Data Cleaning** | Removed null or missing salary values to ensure accurate analysis. 
+**🧩 Key Takeaway:**  
+High-paying Data Analyst roles in India are concentrated in **finance, enterprise solutions, and research-based industries**, especially for **senior o**
 
-**4. Visualization** | Created a horizontal bar chart to clearly compare salaries by company and job title. 
-
-**5. Insights** | Observed that roles like *Senior Business & Data Analyst* (Deutsche Bank) and *Sr. Enterprise Data Analyst* (ACA Group) top the list, indicating premium pay for senior and enterprise-level roles.
 
 ![Alt text](Images/top_jobs.jpg)
 
